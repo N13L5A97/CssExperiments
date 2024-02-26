@@ -54,6 +54,7 @@ img {
 article{
     display: flex;
     max-height: 100vh;
+    justify-content: center;
 }
 
 article section{
@@ -245,12 +246,15 @@ main > section:nth-of-type(4) article:nth-of-type(2){
 main > section:nth-of-type(4) article:nth-of-type(2) > div{
     width: 100%;
     height: 100%;
-    background-image: url(https://images.unsplash.com/photo-1446018944197-6dcd4ccf2711?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
+    background-image: 
+        url(https://images.unsplash.com/photo-1543959243-497a80d3c9a2?q=80&w=2778&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-size: 100%; */
+
     position: absolute;
-    background-position: center;
+    background-position: top;
     mix-blend-mode: multiply;
 }
+
 
 p{
     padding: 1em;
@@ -309,3 +313,144 @@ main > section:nth-of-type(5) article:has(section:first-of-type label:nth-of-typ
     mix-blend-mode: lighten;
 }
 
+/* 6th section with filters */
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:first-of-type input:checked) div > div {
+    filter: none;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(2) input:checked) div > div {
+    filter: grayscale(100%);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(3) input:checked) div > div {
+    filter: sepia(100%);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(4) input:checked) div > div {
+    filter: invert(100%);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(5) input:checked) div > div {
+    filter: hue-rotate(90deg);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(6) input:checked) div > div {
+    filter: saturate(8);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(7) input:checked) div > div {
+    filter: brightness(8);
+    mix-blend-mode: normal;
+}   
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(8) input:checked) div > div {
+    filter: contrast(8);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(9) input:checked) div > div {
+    filter: blur(8px);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(10) input:checked) div > div {
+    filter: opacity(50%);
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(6) article:has(section:first-of-type label:nth-of-type(11) input:checked) div > div {
+    filter: drop-shadow(8px 8px 8px white);
+    mix-blend-mode: normal;
+}
+
+
+/* Some Experiments section 7 */
+main > section:nth-of-type(7) article img{
+    border-radius: .5em;
+    margin-bottom: 5em;
+}
+
+main > section:nth-of-type(7) article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 1em;
+}
+
+main > section:nth-of-type(7) article p{
+    font-size: 6em;
+}
+
+main > section:nth-of-type(7) article:first-of-type img{
+    filter: drop-shadow(10px 10px 10px rgb(78, 29, 255));
+    animation: ovalAnimation 5s infinite ease-in-out; 
+}
+
+main > section:nth-of-type(7) article:nth-of-type(2) img{
+    filter: hue-rotate(0deg);
+    animation: rotateHue 5s infinite linear;
+}
+
+main > section:nth-of-type(7) article:nth-of-type(3) {
+    position: relative;
+}
+
+main > section:nth-of-type(7) article:nth-of-type(3) div{
+    background-image: url(../assets/infinite-lines.png);
+    background-size: 200% 50%;
+    background-position: left;
+    bottom: 0;
+    position: absolute;
+    mix-blend-mode: multiply;
+    height: 80%;
+    width: 100%;
+    animation: moveBackground 5s infinite linear;
+}
+
+@keyframes ovalAnimation{
+    0%{
+        filter: drop-shadow(10px 10px 10px rgb(78, 29, 255));
+    }
+
+    25%{
+        filter: drop-shadow(-10px 10px 10px rgb(78, 29, 255));
+    }
+
+    50%{
+        filter: drop-shadow(-10px -10px 10px rgb(78, 29, 255));
+    }
+
+    75%{
+        filter: drop-shadow(10px -10px 10px rgb(78, 29, 255));
+    }
+
+    100%{
+        filter: drop-shadow(10px 10px 10px rgb(78, 29, 255));
+    }
+}
+
+@keyframes rotateHue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+@keyframes moveBackground {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
