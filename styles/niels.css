@@ -131,7 +131,7 @@ article section{
     background-color: black;
 }
 
-section:last-of-type article > div{
+section:nth-of-type(2) article > div{
     background-color: white;
 }
 
@@ -201,4 +201,64 @@ main > section:nth-of-type(3) article > div{
     width: 100%;
     background-image: url(../assets/lightning.jpeg);
     background-size: cover;
+}
+
+
+/* fourth section with multiple blend modes */
+
+
+main > section:nth-of-type(4) article > div{
+    width: 100%;
+    background-image: url(../assets/lightning.jpeg);
+    background-size: cover;
+}
+
+/* https://cssgradient.io/blog/css-gradient-text/ */
+main > section:nth-of-type(4) article > div > div{
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 5em;
+    font-weight: bold;
+}
+
+
+/* 5th section with blendmodes on shapes */
+
+main > section:nth-of-type(5) article > div > div{
+    width: 100%;
+    background-image: url(../assets/paint-stripes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main > section:nth-of-type(5) article > div {
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+main > section:nth-of-type(5) article:has(section:first-of-type label:first-of-type input:checked) div > div {
+    mix-blend-mode: normal;
+}
+
+main > section:nth-of-type(5) article:has(section:first-of-type label:nth-of-type(2) input:checked) div > div {
+    mix-blend-mode: multiply;
+}
+
+main > section:nth-of-type(5) article:has(section:first-of-type label:nth-of-type(3) input:checked) div > div {
+    mix-blend-mode: screen;
+}
+
+main > section:nth-of-type(5) article:has(section:first-of-type label:nth-of-type(4) input:checked) div > div {
+    mix-blend-mode: darken;
+}
+
+main > section:nth-of-type(5) article:has(section:first-of-type label:nth-of-type(5) input:checked) div > div {
+    mix-blend-mode: lighten;
 }
