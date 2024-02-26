@@ -10,6 +10,7 @@ body{
 
 div{
     width: 100%;
+    background-color: black;
 }
 
 div > div{
@@ -33,7 +34,6 @@ img {
 }
 
 article{
-    background: linear-gradient(45deg, rgb(0, 128, 255), rgb(227, 102, 255));
     display: flex;
     max-height: 100vh;
 }
@@ -128,69 +128,69 @@ article:has(section:first-of-type label:nth-of-type(16) input:checked) div > div
 
 /* change background */
 article section{
-    background: black;
+    background-color: black;
 }
 
 section:last-of-type article > div{
     background-color: white;
 }
 
-article:has(section:last-of-type label:first-of-type input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:first-of-type input:checked) div {
    background-color: white;
 }
 
-article:has(section:last-of-type label:nth-of-type(2) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(2) input:checked) div {
     background-color: black;
 }
 
-article:has(section:last-of-type label:nth-of-type(3) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(3) input:checked) div {
     background-color: blue;
 }
 
-article:has(section:last-of-type label:nth-of-type(4) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(4) input:checked) div {
     background-color: red;
 }
 
-article:has(section:last-of-type label:nth-of-type(5) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(5) input:checked) div {
     background-color: green;
 }
 
-article:has(section:last-of-type label:nth-of-type(6) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(6) input:checked) div {
     background-color: yellow;
 }
 
-article:has(section:last-of-type label:nth-of-type(7) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(7) input:checked) div {
     background-color: cyan;
 }
 
-article:has(section:last-of-type label:nth-of-type(8) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(8) input:checked) div {
     background-color: magenta;
 }
 
-article:has(section:last-of-type label:nth-of-type(9) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(9) input:checked) div {
     background-color: orange;
 }
 
-article:has(section:last-of-type label:nth-of-type(10) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(10) input:checked) div {
     background-color: purple;
 }
 
-article:has(section:last-of-type label:nth-of-type(11) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(11) input:checked) div {
     background-color: pink;
 }
 
-article:has(section:last-of-type label:nth-of-type(12) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(12) input:checked) div {
     background-color: turquoise;
 }
 
-article:has(section:last-of-type label:nth-of-type(13) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(13) input:checked) div {
     background-color: brown;
 }
 
-article:has(section:last-of-type label:nth-of-type(14) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(14) input:checked) div {
     background-color: grey;
 }
 
-article:has(section:last-of-type label:nth-of-type(15) input:checked) div {
+main > section:nth-of-type(2) article:has(section:last-of-type label:nth-of-type(15) input:checked) div {
     background-color: lime;
 }
