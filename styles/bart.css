@@ -1,3 +1,133 @@
-h1{
-    color: #09f;
+/* Basis reset en checkbox knop styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Verberg de eigenlijke checkbox maar gebruik het label als een knop */
+/* input[type="radio"] {
+    display: none;  
+} */
+
+/* input[type="radio"] + label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f90;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+} */
+
+/* Card container stijlen */
+body > div > div {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-size: cover;
+    background-image: url('https://images.pokemontcg.io/xy2/12_hires.png');
+}
+
+/* Sparkles div stijlen */
+div > div > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    transition: opacity 0.5s ease;
+   
+}
+
+/* Toon sparkles met verminderde opaciteit wanneer checkbox is gecheckt */
+html:has([value="toggleEffect"]:checked) div > div > div {
+    opacity: 0.5;   
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif');
+  
+}
+
+html:has([value="screen"]:checked) div > div > div{
+    background-color: blue;
+    mix-blend-mode: screen;
+}
+
+
+html:has([value="overlay"]:checked) div > div > div {
+   background: red;
+   mix-blend-mode: overlay;
+}
+
+/* Activeer multiply mix-blend-mode wanneer de multiply checkbox is gecheckt */
+html:has([value="multiply"]:checked) div > div > div  {
+    mix-blend-mode: multiply;
+    background-color: green;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif');
+    opacity: 0.5;
+}
+
+/* circles */
+
+section > div > div{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    position: absolute;
+  }
+  
+  section > div > div:nth-child(1) {
+    background: red;
+  }
+  
+  section > div > div:nth-child(2) {
+    background: lightgreen;
+    left: 5em;
+  }
+  
+ section > div > div:nth-child(3){
+    background: blue;
+    left: 2em;
+    margin-top: 5em;
+  }
+  
+
+
+section > div + div {
+    display: none; /* Verberg alle cirkels standaard */
+  }
+  
+  section > div + div:target {
+    display: block; /* Toon alleen de cirkelgroep die overeenkomt met het target */
+  }
+  
+  section > div > div {
+    mix-blend-mode: normal;
+  }
+  
+  #multiply .circle {
+    mix-blend-mode: multiply;
+  }
+  
+  #screen .circle {
+    mix-blend-mode: screen;
+  }
+  
+  /* Stijlen voor de "knoppen" */
+  section > div:first-of-type a {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+  }
+  
+  section > div:first-of-type a:hover {
+    background-color: #f0f0f0;
+  }

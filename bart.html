@@ -5,10 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./styles/bart.css">
 </head>
 
 <body>
-    <h1>bart</h1>
+
+    <!-- Styled checkbox as a button -->
+
+
+    <label>
+        <input type="radio" value="none" name="blendmode" checked />
+        nada
+    </label>
+
+    <label>
+        <input type="radio" value="toggleEffect" name="blendmode" />
+        Toggle Effect
+    </label>
+
+    <label>
+        <input type="radio" value="screen" name="blendmode" />
+        Sceen blend mode
+    </label>
+
+    <label>
+        <input type="radio" value="overlay" name="blendmode" />
+        Overlay blend mode
+    </label>
+
+    <label>
+        <input type="radio" value="multiply" name="blendmode" />
+        Multiply blend mode
+    </label>
+
+
+    <div>
+        <div>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div>
+            <a href="#normal">Normal</a>
+            <a href="#multiply">Multiply</a>
+            <a href="#screen">Screen</a>
+        </div>
+
+        <div id="normal" class="isolate">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="multiply" class="isolate">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+
+        <div id="screen" class="isolate">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+
+    </section>
+
 </body>
 
 </html>
