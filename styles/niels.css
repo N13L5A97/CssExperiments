@@ -1,88 +1,118 @@
-section{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2em;
+}
+
+div{
+    background-image: url(../assets/niels.jpg);
+    width: 100%;
+    background-size: cover;
+}
+
+section > section{
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 img {
-    width: 100%;
-    mix-blend-mode: normal;
+   max-width: 40%;
+   height: fit-content;
 }
 
 article{
-    width: 25vw;
-    background-color: red;
+    background: linear-gradient(45deg, rgb(0, 128, 255), rgb(227, 102, 255));
+    display: flex;
+    max-height: 100vh;
+}
+
+article section{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 label{
-    height: 2em;
+    min-height: 2.5em;
+    max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(0, 0, 0);
     color: white;
     font-weight: bold;
+    gap: 1em;
+    padding: 1em;
+    cursor: pointer;
 }
 
-article:has(input:checked):first-of-type img {
+article:has(label:first-of-type input:checked) div {
+    mix-blend-mode: normal;
+}
+
+article:has(label:nth-of-type(2) input:checked) div {
     mix-blend-mode: multiply;
 }
 
-article:has(input:checked):nth-of-type(2) img {
-    mix-blend-mode: screen;
-}
-
-article:has(input:checked):nth-of-type(3) img {
+article:has(label:nth-of-type(3) input:checked) div {
     mix-blend-mode: overlay;
 }
 
-article:has(input:checked):nth-of-type(4) img {
+article:has(label:nth-of-type(4) input:checked) div {
+    mix-blend-mode: screen;
+}
+
+article:has(label:nth-of-type(5) input:checked) div {
     mix-blend-mode: darken;
 }
 
-article:has(input:checked):nth-of-type(5) img {
+article:has(label:nth-of-type(6) input:checked) div {
     mix-blend-mode: lighten;
 }
 
-article:has(input:checked):nth-of-type(6) img {
+article:has(label:nth-of-type(7) input:checked) div {
     mix-blend-mode: color-dodge;
 }
 
-article:has(input:checked):nth-of-type(7) img {
+article:has(label:nth-of-type(8) input:checked) div {
     mix-blend-mode: color-burn;
 }
 
-article:has(input:checked):nth-of-type(8) img {
+article:has(label:nth-of-type(9) input:checked) div {
     mix-blend-mode: hard-light;
 }
 
-article:has(input:checked):nth-of-type(9) img {
+article:has(label:nth-of-type(10) input:checked) div {
     mix-blend-mode: soft-light;
 }
 
-article:has(input:checked):nth-of-type(10) img {
+article:has(label:nth-of-type(11) input:checked) div {
     mix-blend-mode: difference;
 }
 
-article:has(input:checked):nth-of-type(11) img {
+article:has(label:nth-of-type(12) input:checked) div {
     mix-blend-mode: exclusion;
 }
 
-article:has(input:checked):nth-of-type(12) img {
+article:has(label:nth-of-type(13) input:checked) div {
     mix-blend-mode: hue;
 }
 
-article:has(input:checked):nth-of-type(13) img {
+article:has(label:nth-of-type(14) input:checked) div {
     mix-blend-mode: saturation;
 }
 
-article:has(input:checked):nth-of-type(14) img {
+article:has(label:nth-of-type(15) input:checked) div {
     mix-blend-mode: color;
 }
 
-article:has(input:checked):nth-of-type(15) img {
+article:has(label:nth-of-type(16) input:checked) div {
     mix-blend-mode: luminosity;
 }
 
