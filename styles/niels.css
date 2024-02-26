@@ -9,9 +9,19 @@ body{
 }
 
 div{
+    width: 100%;
+}
+
+div > div{
     background-image: url(../assets/niels.jpg);
     width: 100%;
+    height: 100%;
     background-size: cover;
+    background-position: center;
+}
+
+main > section:first-of-type{
+    display: none;
 }
 
 section > section{
@@ -52,67 +62,139 @@ label{
     cursor: pointer;
 }
 
-article:has(label:first-of-type input:checked) div {
+article:has(section:first-of-type label:first-of-type input:checked) div > div {
     mix-blend-mode: normal;
 }
 
-article:has(label:nth-of-type(2) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(2) input:checked) div > div {
     mix-blend-mode: multiply;
 }
 
-article:has(label:nth-of-type(3) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(3) input:checked) div > div {
     mix-blend-mode: overlay;
 }
 
-article:has(label:nth-of-type(4) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(4) input:checked) div > div {
     mix-blend-mode: screen;
 }
 
-article:has(label:nth-of-type(5) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(5) input:checked) div > div {
     mix-blend-mode: darken;
 }
 
-article:has(label:nth-of-type(6) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(6) input:checked) div > div {
     mix-blend-mode: lighten;
 }
 
-article:has(label:nth-of-type(7) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(7) input:checked) div > div {
     mix-blend-mode: color-dodge;
 }
 
-article:has(label:nth-of-type(8) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(8) input:checked) div > div {
     mix-blend-mode: color-burn;
 }
 
-article:has(label:nth-of-type(9) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(9) input:checked) div > div {
     mix-blend-mode: hard-light;
 }
 
-article:has(label:nth-of-type(10) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(10) input:checked) div > div {
     mix-blend-mode: soft-light;
 }
 
-article:has(label:nth-of-type(11) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(11) input:checked) div > div {
     mix-blend-mode: difference;
 }
 
-article:has(label:nth-of-type(12) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(12) input:checked) div > div {
     mix-blend-mode: exclusion;
 }
 
-article:has(label:nth-of-type(13) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(13) input:checked) div > div {
     mix-blend-mode: hue;
 }
 
-article:has(label:nth-of-type(14) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(14) input:checked) div > div {
     mix-blend-mode: saturation;
 }
 
-article:has(label:nth-of-type(15) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(15) input:checked) div > div {
     mix-blend-mode: color;
 }
 
-article:has(label:nth-of-type(16) input:checked) div {
+article:has(section:first-of-type label:nth-of-type(16) input:checked) div > div {
     mix-blend-mode: luminosity;
 }
 
+
+
+/* second section with multiple blend modes */
+
+/* change background */
+article section{
+    background: black;
+}
+
+section:last-of-type article > div{
+    background-color: white;
+}
+
+article:has(section:last-of-type label:first-of-type input:checked) div {
+   background-color: white;
+}
+
+article:has(section:last-of-type label:nth-of-type(2) input:checked) div {
+    background-color: black;
+}
+
+article:has(section:last-of-type label:nth-of-type(3) input:checked) div {
+    background-color: blue;
+}
+
+article:has(section:last-of-type label:nth-of-type(4) input:checked) div {
+    background-color: red;
+}
+
+article:has(section:last-of-type label:nth-of-type(5) input:checked) div {
+    background-color: green;
+}
+
+article:has(section:last-of-type label:nth-of-type(6) input:checked) div {
+    background-color: yellow;
+}
+
+article:has(section:last-of-type label:nth-of-type(7) input:checked) div {
+    background-color: cyan;
+}
+
+article:has(section:last-of-type label:nth-of-type(8) input:checked) div {
+    background-color: magenta;
+}
+
+article:has(section:last-of-type label:nth-of-type(9) input:checked) div {
+    background-color: orange;
+}
+
+article:has(section:last-of-type label:nth-of-type(10) input:checked) div {
+    background-color: purple;
+}
+
+article:has(section:last-of-type label:nth-of-type(11) input:checked) div {
+    background-color: pink;
+}
+
+article:has(section:last-of-type label:nth-of-type(12) input:checked) div {
+    background-color: turquoise;
+}
+
+article:has(section:last-of-type label:nth-of-type(13) input:checked) div {
+    background-color: brown;
+}
+
+article:has(section:last-of-type label:nth-of-type(14) input:checked) div {
+    background-color: grey;
+}
+
+article:has(section:last-of-type label:nth-of-type(15) input:checked) div {
+    background-color: lime;
+}
