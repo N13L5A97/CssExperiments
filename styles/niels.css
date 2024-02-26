@@ -20,10 +20,6 @@ div > div{
     background-position: center;
 }
 
-main > section:first-of-type{
-    display: none;
-}
-
 section > section{
     display: flex;
     gap: 1em;
