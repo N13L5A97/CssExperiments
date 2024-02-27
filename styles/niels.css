@@ -49,6 +49,7 @@ section > section{
 img {
    max-width: 40%;
    height: fit-content;
+   max-height: 80vh;
 }
 
 article{
@@ -267,6 +268,7 @@ p{
 main > section:nth-of-type(4) article > div > div{
     background: white;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     display: flex;
