@@ -1,0 +1,147 @@
+:root{
+    --hue: 30deg;
+    --color-spread: 10;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* BUTTON TO CHANGE TEXT COLOR */
+html:has(input[name="changeColor"]) h2 span{
+    transition: 0.2s ease-in;
+    color: hsl(var(--hue), 100%, 50%);
+    --color-spread: var(--random-number);
+}
+
+body > label{
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+body > label input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* BLENDMODE SELECTOR STYLING */
+div {
+    padding: 1rem;
+    background-color: gray;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* H2 STYLING */
+h2 {
+    font-size: 7rem;
+    font-weight: 700;
+  }
+
+h2 span:nth-child(1){
+    --hue: calc(var(--color-spread)* 2deg);
+}
+
+h2 span:nth-child(2){
+    --hue: calc(var(--color-spread)* 3deg);
+}
+
+h2 span:nth-child(3){
+    --hue: calc(var(--color-spread)* 4deg);
+}
+
+h2 span:nth-child(4){
+    --hue: calc(var(--color-spread)* 5deg);
+}
+
+h2 span:nth-child(5){
+    --hue: calc(var(--color-spread)* 6deg);
+}
+
+h2 span:nth-child(6){
+    --hue: calc(var(--color-spread)* 7deg);
+}
+
+h2 span:nth-child(7){
+    --hue: calc(var(--color-spread)* 8deg);
+}
+
+h2 span:nth-child(8){
+    --hue: calc(var(--color-spread)* 9deg);
+}
+
+h2 span:nth-child(9){
+    --hue: calc(var(--color-spread)* 10deg);
+}
+
+/* MIX BLEND MODE VERANDEREN */
+body:has(label:nth-of-type(1) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: normal;
+}
+body:has(label:nth-of-type(2) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: multiply;
+}
+body:has(label:nth-of-type(3) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: screen;
+}
+body:has(label:nth-of-type(4) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: overlay;
+}
+body:has(label:nth-of-type(5) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: darken;
+}
+body:has(label:nth-of-type(6) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: lighten;
+}
+body:has(label:nth-of-type(7) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: color-dodge;
+}
+body:has(label:nth-of-type(8) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: color-burn;
+}  
+body:has(label:nth-of-type(9) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: hard-light;
+}
+body:has(label:nth-of-type(10) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: soft-light;
+} 
+body:has(label:nth-of-type(11) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: difference;
+}  
+body:has(label:nth-of-type(12) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: exclusion;
+}
+body:has(label:nth-of-type(13) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: hue;
+}
+body:has(label:nth-of-type(14) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: saturation;
+}
+body:has(label:nth-of-type(15) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: color;
+}
+body:has(label:nth-of-type(16) input[name="blendMode"]:checked) h2 span{
+    mix-blend-mode: luminosity;
+}
+/* ZOMETEEEN */
+
+
+
+/* body:has(label:first-of-type input:checked) span{
+    mix-blend-mode: normal;
+ }
+ 
+ body:has(label:nth-of-type(2) input:checked) span{
+     mix-blend-mode: screen;
+ }
+ 
+ body:has(label:nth-of-type(3) input:checked) span{
+     mix-blend-mode: color-dodge;
+ } */
