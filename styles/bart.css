@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1.4em;
 }
 
 /* Verberg de eigenlijke checkbox maar gebruik het label als een knop */
@@ -29,7 +30,9 @@ body > div > div {
     align-items: center;
     margin: auto;
     background-size: cover;
-    background-image: url('https://images.pokemontcg.io/xy2/12_hires.png');
+    /* background-image: url('https://images.pokemontcg.io/xy2/12_hires.png'); */
+    background-image: url('../images/ik4.png'); 
+    margin-top: 1em;
 }
 
 /* Sparkles div stijlen */
@@ -131,3 +134,8 @@ section > div + div {
   section > div:first-of-type a:hover {
     background-color: #f0f0f0;
   }
+
+section > div{
+    margin-top: 1em;
+}
+ 
